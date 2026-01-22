@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vôlei do Caos — Ranking Anual</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body data-page="ranking">
+  
+  <div id="top-login-bar">
+    <div class="top-bar-inner">
+      <span id="user-badge" class="user-badge">
+        <span class="user-icon">🛡️</span>
+        <span id="user-role">ADMIN</span>:
+        <span id="user-name">Nome</span>
+      </span>
+
+      <a id="login-link" href="login.html" class="small-btn" style="text-decoration:none;">🔐 Login</a>
+      <button id="logout-btn" class="small-btn" onclick="logout()">Sair</button>
+    </div>
+  </div>
+<div class="container">
+    <header>
+      <img src="images/logo.png" class="logo" alt="Vôlei do Caos" />
+      <h1 style="margin:0;">🏐 VÔLEI DO CAOS</h1>
+      <p style="font-weight:bold; letter-spacing: 2px; margin:6px 0 0 0;">TERESINA / PI</p>
+    </header>
+
+    <div class="topbar">
+      <a class="nav-link" data-page="index" href="index.html">🎲 Presentes & Duplas</a>
+      <a class="nav-link" data-page="jogos" href="jogos.html">🗓️ Jogos do Dia</a>
+      <a class="nav-link" data-page="ranking" href="ranking.html">🏆 Ranking Anual</a>
+    </div>
+
+    <div class="date-selector">
+      Data do Torneio:
+      <input type="date" id="tournamentDate" class="date-input" onchange="loadTournamentDate()">
+    </div>
+
+    
+  <div class="card">
+    <h2>🏆 Ranking Anual</h2>
+    <table>
+      <thead><tr><th>POS</th><th>JOGADOR</th><th>PONTOS</th></tr></thead>
+      <tbody id="annual-rank-body"></tbody>
+    </table>
+
+    <button class="whatsapp-btn" style="background:var(--ocean);" onclick="shareAnnualRanking()">Compartilhar Ranking Geral 📱</button>
+
+    <div class="actions-row">
+      <button class="action-btn action-btn-danger" onclick="resetRanking()">ZERAR RANKING ANUAL ⚠️</button>
+    </div>
+  </div>
+
+
+    <div class="footer-note">Dados salvos neste navegador (localStorage) • Domínio atual</div>
+  </div>
+
+  <script src="js/auth.js"></script>
+  <script src="js/app.js" defer></script>
+</body>
+</html>
