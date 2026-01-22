@@ -13,7 +13,7 @@ Estrutura:
 Importante:
 - auth.js deve ser carregado antes de app.js nas páginas.
 - Para mudar a senha do admin, edite /js/auth.js:
-  const ADMIN_PASSWORD = "1234";
+  
 
 
 LOGIN (usuário/senha)
